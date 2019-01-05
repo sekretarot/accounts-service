@@ -45,3 +45,4 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'config'
 gem 'httparty'
+gem 'jbuilder', '~> 2.5'
