@@ -3,10 +3,10 @@ class AccountsStorage
   include Singleton
 
   def initialize
-    accounts_data = [{number: "NL323232", balance: 200, customer_id: 1},
-                     {number: "NL323262", balance: 1460, customer_id: 2},
-                     {number: "NL323242", balance: 3240, customer_id: 3},
-                     {number: "NL323249", balance: 2100, customer_id: 1}]
+    accounts_data = [{number: "3506988578", balance: 200, customer_id: 1},
+                     {number: "3506988378", balance: 1460, customer_id: 2},
+                     {number: "3506988532", balance: 3240, customer_id: 3},
+                     {number: "3506988422", balance: 2100, customer_id: 1}]
     @accounts = accounts_data.map do |account_hash|
       Account.new(account_hash)
     end
