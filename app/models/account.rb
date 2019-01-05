@@ -7,6 +7,14 @@ class Account
     @customer_id = init_json[:customer_id].to_i
   end
 
+  def create_transaction(amount)
+    TransactionsService.new(self).create_transaction(amount)
+  end
+
+  def transactions
+    TransactionsService.new(self).get_transactions
+  end
+
   private
 
   def random_account_number

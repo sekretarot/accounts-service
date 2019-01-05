@@ -11,4 +11,9 @@ class TransactionsService
     self.class.post("/transactions", options)
   end
 
+  def get_transactions
+    options = {query: {account_number: @account.number}}
+    self.class.get("/transactions/account", options).parsed_response
+  end
+
 end
