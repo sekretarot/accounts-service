@@ -1,7 +1,7 @@
 class AccountsController < ApplicationController
 
   def customer_accounts
-    @accounts = AccountsStorage.instance.get_customer_accounts(params[:customer_id].to_i)
+    @accounts = AccountsStorage.instance.get_customer_accounts(params[:customer_id])
   end
 
   def create

@@ -19,7 +19,7 @@ class AccountsStorage
   end
 
   def get_customer_accounts(customer_id)
-    @accounts.select {|account| account.customer_id == customer_id}
+    @accounts.select {|account| account.customer_id == customer_id.to_i}
   end
 
 end
