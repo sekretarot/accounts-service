@@ -22,4 +22,8 @@ class AccountsStorage
     @accounts.select {|account| account.customer_id == customer_id.to_i}
   end
 
+  def delete_account!(account)
+    @accounts.delete(account)
+  end
+
 end
