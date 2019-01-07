@@ -1,1 +1,5 @@
-transactions_service_url: http://localhost:3002
+# For Mac
+transactions_service_url: http://docker.for.mac.localhost:3002
+
+# For Windows
+#transactions_service_url: http://docker.for.win.localhost:3002
