@@ -1,24 +1,29 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### How to run in development
 
-Things you may want to cover:
+To make inter-container communication work uncomment the line corresponding to your OS in `config/settings.yml`.
+This will enable the service to access any other docker containers running locally on the specified ports.
 
-* Ruby version
+Then, from the repository folder run: 
 
-* System dependencies
+`docker-compose up --build`
 
-* Configuration
+This starts your Rails server **listening at port 3001** in a Docker container. 
 
-* Database creation
+### Example usage
+Please note that the provided functionality here might be degraded depending on the availability of other services.
 
-* Database initialization
+#### Api endpoints 
 
-* How to run the test suite
+Service Health
 
-* Services (job queues, cache servers, search engines, etc.)
+GET `/health`
 
-* Deployment instructions
+Get accounts belonging to a customer
 
-* ...
+GET `/accounts/customer?customer_id=3`
+
+Create new account for customer
+
+POST `/accounts?customer_id=12`
